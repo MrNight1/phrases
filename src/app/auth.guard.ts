@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     // return true;
-    if (this.authService.isLoggednIn()){
+    if (this.authService.isLoggednIn()) {
       return true;
     } else {
       this.ngZone.run(() => this.router.navigate(['/']));
